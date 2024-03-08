@@ -1,0 +1,54 @@
+﻿<Window x:Class="JenoptikWPF.Views.Dialogs.ScanParamsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JenoptikWPF.Views.Dialogs"
+        mc:Ignorable="d"
+        xmlns:userControls="clr-namespace:JenoptikWPF.Views.UserControls"
+        Title="Scan Params" Height="604" Width="515" Icon="/Assets/logo.png">
+    <Grid Background="#EBF1F4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <userControls:SliderControl Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="center" Width="430" Margin="30,0,0,0" Header="Scan Speed" 
+                                MinValue="1.0" MaxValue="5000" Unit="mm/s" 
+                                Value="{Binding LaserParamsModel.ScanSpeed}"  
+                                />
+
+        <userControls:SliderControl Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="center" Width="430"  Margin="30,0,0,0" Header="Duty Cycle" 
+                                MinValue="0" MaxValue="100" Unit="%"
+                                Value="{Binding LaserParamsModel.DutyCycle}"
+                                />
+        
+        <userControls:SliderControl Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="center" Width="430"  Margin="30,0,0,0" Header="Spot Diameter" 
+                        MinValue="1" MaxValue="500" Unit="µm"
+                        Value="{Binding LaserParamsModel.SpotDiameter}"
+                        />
+        
+        <userControls:SliderControl Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="center" Width="430"  Margin="30,0,0,0" Header="Focus Distance" 
+                        MinValue="1" MaxValue="500" Unit="mm"
+                        Value="{Binding LaserParamsModel.FocusDistance}"
+                        />
+        
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right" Margin="30,0,30,30">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Width" Value="100"/>
+                    <Setter Property="Height" Value="45"/>
+                    <Setter Property="Margin" Value="10"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Background="#CCE2EE" Foreground="#006EA9">Abort</Button>
+            <Button Background="#006EA9" Foreground="White" >Save</Button>
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="JenoptikWPF.Views.UserControls.NavBarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JenoptikWPF.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="1000">
+
+    <UserControl.Resources>
+        <Style TargetType="Menu" x:Key="MenuStyle">
+            <Setter Property="Background" Value="#006EA9" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid Background="#006EA9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Image Grid.Column="0" Source="/Image;component/../../Assets/logo.png" ></Image>
+
+        <Menu Grid.Column="1" Style="{StaticResource MenuStyle}">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Click="New_Click" Foreground="#006EA9" />
+                <MenuItem Header="Open" Click="Open_Click" Foreground="#006EA9" />
+                <MenuItem Header="Save" Click="Save_Click" Foreground="#006EA9" />
+                <MenuItem Header="Load Material Params" Command="{Binding OpenMaterialSettingsCommand}" Foreground="#006EA9" />
+            </MenuItem>
+        </Menu>
+
+        <Menu Grid.Column="2" Style="{StaticResource MenuStyle}">
+            <MenuItem Header="Settings">
+                <MenuItem Header="Advanced Settings" Command="{Binding OpenAdvancedSettingsCommand}" Foreground="#006EA9" />
+                <MenuItem Header="Scan Settings" Command="{Binding OpenScanSettingsCommand}" Foreground="#006EA9" />
+            </MenuItem>
+        </Menu>
+
+        <Menu Grid.Column="3" Style="{StaticResource MenuStyle}">
+            <MenuItem Header="Help">
+                <MenuItem Header="View Help" Foreground="#006EA9" />
+                <MenuItem Header="About This Application" Foreground="#006EA9"  />
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</UserControl>
