@@ -53,7 +53,7 @@ namespace JenoptikWPF.Views.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/JenoptikWPF;component/views/usercontrols/navbarcontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/JenoptikWPF;V1.0.0.0;component/views/usercontrols/navbarcontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\UserControls\NavBarControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

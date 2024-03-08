@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JenoptikWPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccf553b6c806c426ad4d91e12a1714b1c2eb26d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("JenoptikWPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JenoptikWPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
